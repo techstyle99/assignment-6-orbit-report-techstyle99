@@ -9,12 +9,12 @@
 
     <!-- passing to ngFor an iteration expression i.e. let i of items -->
     <!-- iterate through every row, fill in api data to table data fields -->
-    <tr *ngFor="let satellite of satellites" class="data-row">
+    <tr *ngFor="let satellite of satellites; let i=index" [class.zebra]= "i%2===0">
         <td> {{ satellite.name }} </td>
         <td [class.warning]="satellite.isSpaceDebris()"> {{ satellite.type}} </td>
-        <td> {{ satellite.launchDate}} </td>
-        <td> {{ satellite.orbitType}} </td>
         <td> {{ satellite.operational}} </td>
+        <td> {{ satellite.orbitType}} </td>
+        <td> {{ satellite.launchDate}} </td>
     </tr>
 </table>
 
