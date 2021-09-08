@@ -7,11 +7,11 @@ import { Satellite } from '../satellite';
   styleUrls: ['./orbit-counts.component.css']
 })
 export class OrbitCountsComponent implements OnInit {
-
+	// from parent component to child component
 	@Input() satellites: Satellite[];
 
   constructor() { }
-
+  // OnInit interface has a hook method called ngOnInit(): Angular component lifecycle 
   ngOnInit() {
   }
 

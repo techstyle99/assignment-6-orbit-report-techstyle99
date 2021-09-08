@@ -11,11 +11,10 @@
     <!-- iterate through every row, fill in api data to table data fields -->
     <tr *ngFor="let satellite of satellites" class="data-row">
         <td> {{ satellite.name }} </td>
-        <td [class.warning="satellite.isSpaceDebris()"]> {{ satellite.type}} </td>
+        <td [class.warning]="satellite.isSpaceDebris()"> {{ satellite.type}} </td>
         <td> {{ satellite.launchDate}} </td>
         <td> {{ satellite.orbitType}} </td>
         <td> {{ satellite.operational}} </td>
-        
     </tr>
 </table>
 
